@@ -3,7 +3,7 @@ CNN based climate change detection model
 
 ## Processes of the climate change detection
 
-   - Training & validation with CESM2 Large Ensemble data set (csh/cnn_run.sh)
+   - Training & validation & test (csh/cnn_run.sh)
    
    - Occlusion sensitivity analysis (csh/cnn_occ.sh)
 
