@@ -9,7 +9,7 @@ CNN based climate change detection model
 
 ## Data set (netCDF4)
 
-   -  you can download data set here: now preparing..
+   -  you can download data set here: in preparation.
    
    -  The data set consists of the following:
    
