@@ -1,6 +1,6 @@
-# Deep-detection
-CNN based climate change detection model
-
+# Deep-detection (DD) model for climate change detection
+  The deep detection (DD) model, which refers to the CNN model for detecting climate change signals embedded in daily precipitation anomalies, comprises an input layer, four convolution layers, two pooling layers, one fully connected layer, and an output layer. The size of the convolution kernel, which extracts key features from the input to produce feature maps, is 3x3. Spatial pooling was performed after the first two convolution processes using by 2x2 max pooling with a stride of 2. L2 regularization was applied to minimize overfitting.
+ 
 ## Processes of the climate change detection
 
    - Training & validation & test (csh/cnn_run.sh)
