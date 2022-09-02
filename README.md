@@ -9,7 +9,7 @@
 
 ## Data set (netCDF4)
 
-   -  you can download data set here: in preparation (33GB).
+   -  you can download data set here (33GB): https://168.131.122.201/admin/OCL/Data/Deep-Detection/Dataset_DD.zip.
    
    -  The data set consists of the following:
    
