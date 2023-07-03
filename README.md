@@ -78,6 +78,7 @@
 - Label: <code>dataset/agmt/HadCRUT5_1850_2022.nc</code>
 
 ## Requirements
+   -  python 3.6.10
    -  tensorflow-gpu v2.1.0
    -  scikit-learn v0.23.1
    -  netcdf4 v1.5.1.2
@@ -85,5 +86,10 @@
    -  scipy v1.1.0
    -  matplotlib v3.1.3
    -  basemap v1.2.0
+   -  
+## Our Linux environment
+   -  OS: Ubuntu 18.04.6 LTS
+   -  GPU: Nvidia Tesla V100
+   -  CUDA version: 11.4
    
    
