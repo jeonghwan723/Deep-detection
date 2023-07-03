@@ -13,31 +13,31 @@
 
 ## Python scripts for generating main figures (analysis/)
 - Figure 1: [Figure_1]_1_plot.py
-- 
+  
 - Figure 2: [Figure_2]_1_bootstrap.py and [Figure_2]_2_plot.py
-- 
+  
 - Figure 3: [Figure_3]_1_binning.py, [Figure_3]_2_PDF_ratio.py, and [Figure_3]_3_plot.py
-- 
+  
 - Figure 4: [Figure_4]_1__STD_trend.py, [Figure_4]_2_var_change.py, [Figure_4]_3_STD_Clim_ratio.py
             [Figure_4]_4_CPCU_var_change.py, [Figure_4]_5_bootstrap_STD_trend.py, [Figure_4]_6_bootstrap_STD_Clim_ratio.py
             , and [Figure_4]_7_plot.py
 
 ## Python scripts for generating extended data (ED) figures (analysis/)
 - ED Fig. 1: [ED_Figure_1]_1_plot.py
-- 
+  
 - ED Fig. 3 & 4: [Figure_1]_1_plot.py
-- 
+  
 - ED Fig. 5: [ED_Figure_5]_1_plot.py
-- 
+  
 - ED Fig. 6: [ED_Figure_6]_1_OS5_trend.py, [ED_Figure_6]_2_GSHAP_trend.py, [ED_Figure_6]_3_IG_trend.py
              , and [ED_Figure_6]_4_plot.py
   
 - ED Fig. 7: [ED_Figure_7]_1_OS7_trend.py, [ED_Figure_7]_2_plot.py
-- 
+  
 - ED Fig. 8: [ED_Figure_8]_1_plot.py
-- 
+  
 - ED Fig. 9: [ED_Figure_9]_1_std_ratio.py, [ED_Figure_9]_2_STD_Clim_ratio.py, and [ED_Figure_9]_3_plot.py
-- 
+  
 - ED Fig. 10: [ED_Figure_10]_1_plot.py
 
 ## Data set (netCDF4)
