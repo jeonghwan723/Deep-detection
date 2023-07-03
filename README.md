@@ -16,7 +16,7 @@
 
 - **5x5 occlusion sensitivity test for DD model**: dd_os5.sh
 
-- **Shapley Additive exPlanations (SHAP) with gradient explainer for DD model**: dd_gshap.py
+- **Shapley Additive exPlanations (SHAP) with gradient explainer for DD model**: dd_gshap.sh
 
 - **Integrated gradient for DD model**: dd_ig.sh
 
