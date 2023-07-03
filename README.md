@@ -56,19 +56,23 @@
    -  The data set consists of the following:
    
    
-          (1) Training set for training (CESM2 LE): 
+          (1) Training set: 
           
-              Input: [CESM2_LE_prcp_tr.nc]
-              Label: [CESM2_LE_agmt_tr.nc]
+              Input: dataset/prcp/CESM2_LE_prcp_lat_tr.nc
+              Label: dataset/agmt/CESM2_LE_agmt_tr.nc
        
-          (2) validation set for training (CESM2 LE):
+          (2) validation set:
           
-              Input: [CESM2_LE_prcp_val.nc]
-              Label: [CESM2_LE_agmt_val.nc]
+              Input: dataset/prcp/CESM2_LE_prcp_lat_val.nc
+              Label: dataset/agmt/CESM2_LE_agmt_val.nc
    
           (3) Test set (ERA5 & IMERG data set):
           
-              Input: [ERA5_prcp.nc] and [IMERG_prcp.nc]
+              Input: dataset/prcp/ERA5_prcp_lat_1979_2021.nc,
+                     dataset/prcp/MSWEP_prcp_lat_1979_2021.nc,
+                     dataset/prcp/IMERG_prcp_lat_2000_2021.nc,
+                     dataset/prcp/GPCP_v3.2_prcp_lat_2000_2020.nc
+              Label: dataset/agmt/HadCRUT5_1850_2022.nc
 
 ## Requirement (python packages)
 
