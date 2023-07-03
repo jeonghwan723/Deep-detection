@@ -77,7 +77,7 @@
          dataset/prcp/GPCP_v3.2_prcp_lat_2000_2020.nc
 - Label: dataset/agmt/HadCRUT5_1850_2022.nc
 
-## Requirement (python packages)
+## Requirements
    -  tensorflow-gpu v2.1.0
    -  scikit-learn v0.23.1
    -  netcdf4 v1.5.1.2
