@@ -69,7 +69,7 @@
 - Input: <code>dataset/prcp/CESM2_LE_prcp_lat_val.nc</code>
 - Label: <code>dataset/agmt/CESM2_LE_agmt_val.nc</code>
    
-(3) Test set (ERA5 & IMERG data set):
+(3) Test set (observed precipitation products):
           
 - Input: <code>dataset/prcp/ERA5_prcp_lat_1979_2021.nc</code>,
          <code>dataset/prcp/MSWEP_prcp_lat_1979_2021.nc</code>,
