@@ -1,0 +1,76 @@
+#!/usr/bin/env python
+#JHK
+# python sample script for 7x7 occlusion sensitivity
+import numpy as np
+from netCDF4 import Dataset
+import tensorflow as tf
+from tensorflow.keras import models, backend
+import os
+from tqdm import tqdm
+
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"]= "gpu_number"
+
+op_train = 'op_training'
+op_test  = 'op_testing'
+op_gpu   = 'option_gpu'
+
+o_path = 'h_dir/output/exp_name/ENensemble/'
+
+# GPU setting
+if op_gpu == 'on':
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    tf.config.experimental.set_memory_growth(gpus[0], True)
+
+# load input
+f = Dataset('h_dir/input/test_inp','r')
+test_x = f.variables['prcp'][:,:,12:67,:]
+f.close()
+
+# extend (0-360 -> 0-380)
+test_x = np.append(test_x, test_x[:,:,:,:16], axis=3) 
+
+test_tdim, cdim, ydim, xdim = test_x.shape
+
+# axes swap [tdim, cdim, ydim, xdim] -> [tdim, xdim, ydim, cdim]
+test_x = np.swapaxes(test_x, 1, 3)
+
+# load trained model
+model = models.load_model(o_path+'model_last.hdf5')
+
+# sensitivity test
+result = np.zeros((test_tdim,55,160))
+for i in range(154):
+    for j in range(50):
+
+        print(i, j)
+
+        # mask 3x3 area
+        msk = np.array(test_x)
+        msk[:,i:i+7,j:j+7] = 0
+
+        # prediction
+        tmp = model.predict(msk, batch_size=1024)
+        result[:,j+3,i+3] = np.array(tmp)[:,0]
+
+        backend.clear_session()
+
+        del msk, tmp
+        #backend.clear_session()
+
+# save sensitivity test result
+result.astype('float32').tofile(o_path+'os7_o_name.gdat')
+
+ctl = open(o_path+'os7_o_name.ctl','w')
+ctl.write('dset ^os7_o_name.gdat\n')
+ctl.write('undef -9.99e+08\n')
+ctl.write('xdef  160  linear   0.  2.5\n')
+ctl.write('ydef   55  linear -60.  2.5\n')
+ctl.write('zdef   1  linear 1 1\n')
+ctl.write('tdef '+str(test_tdim)+'  linear jan1980 1dy\n')
+ctl.write('vars   1\n')
+ctl.write('pr    1   1  pr\n')
+ctl.write('ENDVARS\n')
+ctl.close()
+

@@ -1,0 +1,109 @@
+#!/usr/bin/env python
+#JHK
+import numpy as np
+from netCDF4 import Dataset
+import tensorflow as tf
+from tensorflow.keras import Model, datasets, layers, models, backend
+from tensorflow import keras
+from contextlib import redirect_stdout
+import os, sys
+from tqdm import tqdm
+
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"]= "gpu_number"
+
+op_train = 'op_training'
+op_test  = 'op_testing'
+op_gpu   = 'option_gpu'
+
+o_path = 'h_dir/output/exp_name/ENensemble/'
+
+print(o_path)
+
+# GPU setting
+if op_gpu == 'on':
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    tf.config.experimental.set_memory_growth(gpus[0], True)
+
+# load input
+f = Dataset('h_dir/dataset/test_inp','r')
+test_x = f.variables['prcp'][:,:,12:67,:]
+f.close()
+
+# extend (0-360 -> 0-380)
+test_x = np.append(test_x, test_x[:,:,:,:16], axis=3) 
+
+test_tdim, cdim, ydim, xdim = test_x.shape
+
+# axes swap [tdim, cdim, ydim, xdim] -> [tdim, xdim, ydim, cdim]
+test_x = np.swapaxes(test_x, 1, 3)
+
+# load trained model
+model = models.load_model(o_path+'model_last.hdf5')
+
+# --------------------------------------------------------------------------
+# compute saliency map
+# --------------------------------------------------------------------------
+sal_map = np.zeros((test_tdim,55,160))
+for i in tqdm(range(test_tdim), ncols=60):
+
+    img = np.array(test_x[i:i+1])
+    #print(i+1, '/', test_tdim)
+
+    gradients = np.zeros((10,55,160))
+    for j in range(6):
+
+        alpha = j * 0.2
+        tmp = img * alpha
+
+        #y_pred = model.predict(tmp)
+        
+        images = tf.Variable(tmp, dtype=float)
+        
+        with tf.GradientTape() as tape:
+            pred = model(images, training=False)    
+            loss = pred[0]
+
+        grad = tape.gradient(loss, images)
+        
+        # absolute
+        #dgrad_abs = tf.math.abs(grads)[:,:,:,0]
+        
+        ## normalize the gradient to between 0 and 1
+        #arr_min, arr_max  = np.min(dgrad_abs), np.max(dgrad_abs)
+        #grad_eval = (dgrad_abs - arr_min) / (arr_max - arr_min + 1e-18)
+
+        grad = grad[:,:,:,0]
+        
+        # [1,xdim,ydim] -> [ydim,xdim]
+        grad = np.swapaxes(grad, 1, 2)[0]
+
+        gradients[j] = grad
+    
+    # riemann sum (trapezoidal)
+    rs = np.mean((gradients[:-1] + gradients[1:]) / 2, axis=0)
+    
+    sal_map[i] = rs
+
+# --------------------------------------------------------------------------
+# save the saliency map
+# --------------------------------------------------------------------------
+sal_map = np.array(sal_map)
+sal_map.astype('float32').tofile(o_path+'ig_o_name.gdat')
+
+ctl = open(o_path+'ig_o_name.ctl','w')
+ctl.write('dset ^ig_o_name.gdat\n')
+ctl.write('undef -9.99e+08\n')
+ctl.write('xdef 160  linear   0.  2.5\n')
+ctl.write('ydef  55  linear -60.  2.5\n')
+ctl.write('zdef   1  linear 1 1\n')
+ctl.write('tdef '+str(test_tdim)+'  linear 01jan0001 1yr\n')
+ctl.write('vars   1\n')
+ctl.write('p    1   1  variable\n')
+ctl.write('ENDVARS\n')
+ctl.close()
+
+os.system('cdo -f nc import_binary '+o_path+'ig_o_name.ctl '+o_path+'ig_o_name.nc')
+os.system('rm -f '+o_path+'ig_o_name.ctl '+o_path+'ig_o_name.gdat')
+
