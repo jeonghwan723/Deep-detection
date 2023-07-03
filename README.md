@@ -17,65 +17,65 @@
 ## C-shell scripts for constructing DD & ridge regression model and physical interpretation (csh/)
 - **Training & validation & test of DD model**: <code>dd_run.sh</code>
   
-- **Training & test of ridge regression model**: reg_run.sh
+- **Training & test of ridge regression model**: <code>reg_run.sh</code>
   
-- **7x7 occlusion sensitivity test for DD model**: dd_os7.sh
+- **7x7 occlusion sensitivity test for DD model**: <code>dd_os7.sh</code>
   
-- **7x7 occlusion sensitivity test for ridge regression model**: reg_os7.sh
+- **7x7 occlusion sensitivity test for ridge regression model**: <code>reg_os7.sh</code>
 
-- **5x5 occlusion sensitivity test for DD model**: dd_os5.sh
+- **5x5 occlusion sensitivity test for DD model**: <code>dd_os5.sh</code>
 
-- **Shapley Additive exPlanations (SHAP) with gradient explainer for DD model**: dd_gshap.sh
+- **Shapley Additive exPlanations (SHAP) with gradient explainer for DD model**: <code>dd_gshap.sh</code>
 
-- **Integrated gradient for DD model**: dd_ig.sh
+- **Integrated gradient for DD model**: <code>dd_ig.sh</code>
 
 ## Python scripts for generating main figures (analysis/)
-- **Figure 1**: [Figure_1]_1_plot.py
+- **Figure 1**: <code>[Figure_1]_1_plot.py</code>
   
-- **Figure 2**: [Figure_2]_1_bootstrap.py and [Figure_2]_2_plot.py
+- **Figure 2**: <code>[Figure_2]_1_bootstrap.py</code> and <code>[Figure_2]_2_plot.py</code>
   
-- **Figure 3**: [Figure_3]_1_binning.py, [Figure_3]_2_PDF_ratio.py, and [Figure_3]_3_plot.py
+- **Figure 3**: <code>[Figure_3]_1_binning.py</code>, <code>[Figure_3]_2_PDF_ratio.py</code>, and <code>[Figure_3]_3_plot.py</code>
   
-- **Figure 4**: [Figure_4]_1__STD_trend.py, [Figure_4]_2_var_change.py, [Figure_4]_3_STD_Clim_ratio.py
-                [Figure_4]_4_CPCU_var_change.py, [Figure_4]_5_bootstrap_STD_trend.py, [Figure_4]_6_bootstrap_STD_Clim_ratio.py
-                , and [Figure_4]_7_plot.py
+- **Figure 4**: <code>[Figure_4]_1__STD_trend.py</code>, <code>[Figure_4]_2_var_change.py</code>, <code>[Figure_4]_3_STD_Clim_ratio.py</code>
+                <code>[Figure_4]_4_CPCU_var_change.py</code>, <code>[Figure_4]_5_bootstrap_STD_trend.py</code>, <code>[Figure_4]_6_bootstrap_STD_Clim_ratio.py</code>
+                , and <code>[Figure_4]_7_plot.py</code>
 
 ## Python scripts for generating extended data (ED) figures (analysis/)
-- **ED Fig. 1**: [ED_Figure_1]_1_plot.py
+- **ED Fig. 1**: <code>[ED_Figure_1]_1_plot.py</code>
   
-- **ED Fig. 3 & 4**: [Figure_1]_1_plot.py
+- **ED Fig. 3 & 4**: <code>[Figure_1]_1_plot.py</code>
   
-- **ED Fig. 5**: [ED_Figure_5]_1_plot.py
+- **ED Fig. 5**: <code>[ED_Figure_5]_1_plot.py</code>
   
-- **ED Fig. 6**: [ED_Figure_6]_1_OS5_trend.py, [ED_Figure_6]_2_GSHAP_trend.py, [ED_Figure_6]_3_IG_trend.py
-                 , and [ED_Figure_6]_4_plot.py
+- **ED Fig. 6**: <code>[ED_Figure_6]_1_OS5_trend.py</code>, <code>[ED_Figure_6]_2_GSHAP_trend.py</code>, <code>[ED_Figure_6]_3_IG_trend.py</code>
+                 , and <code>[ED_Figure_6]_4_plot.py</code>
   
-- **ED Fig. 7**: [ED_Figure_7]_1_OS7_trend.py, [ED_Figure_7]_2_plot.py
+- **ED Fig. 7**: <code>[ED_Figure_7]_1_OS7_trend.py</code>, <code>[ED_Figure_7]_2_plot.py</code>
   
-- **ED Fig. 8**: [ED_Figure_8]_1_plot.py
+- **ED Fig. 8**: <code>[ED_Figure_8]_1_plot.py</code>
   
-- **ED Fig. 9**: [ED_Figure_9]_1_std_ratio.py, [ED_Figure_9]_2_STD_Clim_ratio.py, and [ED_Figure_9]_3_plot.py
+- **ED Fig. 9**: <code>[ED_Figure_9]_1_std_ratio.py</code>, <code>[ED_Figure_9]_2_STD_Clim_ratio.py</code>, and <code>[ED_Figure_9]_3_plot.py</code>
   
-- **ED Fig. 10**: [ED_Figure_10]_1_plot.py
+- **ED Fig. 10**: <code>[ED_Figure_10]_1_plot.py</code>
 
 ## Data set (netCDF4)
 #### You can download data set here (34.9GB): https://168.131.122.201/OCL/Data/Deep-Detection/Dataset_DD.tar
 #### The data set consists of the following:
 (1) Training set: 
-- Input: dataset/prcp/CESM2_LE_prcp_lat_tr.
-- Label: dataset/agmt/CESM2_LE_agmt_tr.nc
+- Input: <code>dataset/prcp/CESM2_LE_prcp_lat_tr</code>
+- Label: <code>dataset/agmt/CESM2_LE_agmt_tr.nc</code>
        
 (2) validation set:
-- Input: dataset/prcp/CESM2_LE_prcp_lat_val.nc
-- Label: dataset/agmt/CESM2_LE_agmt_val.nc
+- Input: <code>dataset/prcp/CESM2_LE_prcp_lat_val.nc</code>
+- Label: <code>dataset/agmt/CESM2_LE_agmt_val.nc</code>
    
 (3) Test set (ERA5 & IMERG data set):
           
-- Input: dataset/prcp/ERA5_prcp_lat_1979_2021.nc,
-         dataset/prcp/MSWEP_prcp_lat_1979_2021.nc,
-         dataset/prcp/IMERG_prcp_lat_2000_2021.nc,
-         dataset/prcp/GPCP_v3.2_prcp_lat_2000_2020.nc
-- Label: dataset/agmt/HadCRUT5_1850_2022.nc
+- Input: <code>dataset/prcp/ERA5_prcp_lat_1979_2021.nc</code>,
+         <code>dataset/prcp/MSWEP_prcp_lat_1979_2021.nc</code>,
+         <code>dataset/prcp/IMERG_prcp_lat_2000_2021.nc</code>,
+         <code>dataset/prcp/GPCP_v3.2_prcp_lat_2000_2020.nc</code>
+- Label: <code>dataset/agmt/HadCRUT5_1850_2022.nc</code>
 
 ## Requirements
    -  tensorflow-gpu v2.1.0
