@@ -15,7 +15,7 @@
 >> sample/: Python sample scripts used in C-shell scripts
 
 ## C-shell scripts for constructing DD & ridge regression model and physical interpretation (csh/)
-- **Training & validation & test of DD model**: <pre><code>dd_run.sh</code></pre>
+- **Training & validation & test of DD model**: <code>dd_run.sh</code>
   
 - **Training & test of ridge regression model**: reg_run.sh
   
