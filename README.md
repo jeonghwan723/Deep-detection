@@ -4,7 +4,13 @@
   The DD model accepts gridded data of normalized daily precipitation anomalies as an input variable. These anomalies were determined by subtracting the daily climatology data for 1980–2010 and then normalizing it by dividing the longitudinally-averaged standard deviation of the daily precipitation anomalies at the corresponding latitude during the same time period. The input variable has the dimension of 160×55 (2.5°×2.5° resolution over 0°–400°E, 62.5°S–76.5°N). To properly consider the precipitation pattern over around 360°(0°)E, the data was longitudinally extended by concatenating 0°–360°E and 360°–400°E. Through five convolutional and two max-pooling processes, the horizontal dimension of the feature map is reduced to 40 × 14. As the last convolutional layer uses 16 convolutional filters, the size of the dimension of the final feature map is 8,960 (i.e., 40×14×16). Then, each element of the final feature map is connected to the 1st dense layer with 32 neurons, and lastly, 1st dense layer is connected to the 2nd dense layer with a single neuron to output a scalar value representing the AGMT anomaly of the corresponding year. The variability of the estimated annual-mean AGMT anomaly was matched to the observed data to avoid the influence of systematic differences between the training and testing samples. Note that this post-processing did not affect the detection results, as both the test statistics (i.e., internal variability of the estimated AGMT) and detection metric (i.e., AGMT on any specific day) were modified to the same degree.
 
   We generated five ensemble members with different random initial weights and defined the ensemble-averaged AGMT as the final forecast. The Xavier initialization technique was applied to initialize weights and biases. Tangent hyperbolic and sigmoid functions were used as the activation functions for the convolutional and fully connected layers, respectively. Adam optimization was applied as the gradient descent method, and the mean absolute error was applied as the loss function.
- 
+
+## Repository structure
+Deep-detection/: main directory
+> analysis/: Python scripts for conducting analysis and generagting figures
+> csh/: C-shell scripts for constructing DD & ridge regression model, and conducting physical interpretation
+> sample/: Python sample scripts used in C-shell scripts
+
 ## C-shell scripts for constructing DD & ridge regression model and physical interpretation (csh/)
 - **Training & validation & test of DD model**: dd_run.sh
   
