@@ -51,28 +51,24 @@
 
 ## Data set (netCDF4)
 
-   -  You can download data set here (34.9GB): https://168.131.122.201/OCL/Data/Deep-Detection/Dataset_DD.tar
+### You can download data set here (34.9GB): https://168.131.122.201/OCL/Data/Deep-Detection/Dataset_DD.tar
+### The data set consists of the following:
    
-   -  The data set consists of the following:
-   
-   
-          (1) Training set: 
-          
-              Input: dataset/prcp/CESM2_LE_prcp_lat_tr.nc
-              Label: dataset/agmt/CESM2_LE_agmt_tr.nc
+(1) Training set: 
+- Input: dataset/prcp/CESM2_LE_prcp_lat_tr.
+- Label: dataset/agmt/CESM2_LE_agmt_tr.nc
        
-          (2) validation set:
-          
-              Input: dataset/prcp/CESM2_LE_prcp_lat_val.nc
-              Label: dataset/agmt/CESM2_LE_agmt_val.nc
+(2) validation set:
+- Input: dataset/prcp/CESM2_LE_prcp_lat_val.nc
+- Label: dataset/agmt/CESM2_LE_agmt_val.nc
    
-          (3) Test set (ERA5 & IMERG data set):
+(3) Test set (ERA5 & IMERG data set):
           
-              Input: dataset/prcp/ERA5_prcp_lat_1979_2021.nc,
-                     dataset/prcp/MSWEP_prcp_lat_1979_2021.nc,
-                     dataset/prcp/IMERG_prcp_lat_2000_2021.nc,
-                     dataset/prcp/GPCP_v3.2_prcp_lat_2000_2020.nc
-              Label: dataset/agmt/HadCRUT5_1850_2022.nc
+- Input: dataset/prcp/ERA5_prcp_lat_1979_2021.nc,
+         dataset/prcp/MSWEP_prcp_lat_1979_2021.nc,
+         dataset/prcp/IMERG_prcp_lat_2000_2021.nc,
+         dataset/prcp/GPCP_v3.2_prcp_lat_2000_2020.nc
+- Label: dataset/agmt/HadCRUT5_1850_2022.nc
 
 ## Requirement (python packages)
 
