@@ -7,8 +7,11 @@
 
 ## Repository structure
 Deep-detection/: main directory
+
 > analysis/: Python scripts for conducting analysis and generagting figures
+ 
 > csh/: C-shell scripts for constructing DD & ridge regression model, and conducting physical interpretation
+
 > sample/: Python sample scripts used in C-shell scripts
 
 ## C-shell scripts for constructing DD & ridge regression model and physical interpretation (csh/)
