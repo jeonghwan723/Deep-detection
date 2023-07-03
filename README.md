@@ -5,13 +5,7 @@
 
   We generated five ensemble members with different random initial weights and defined the ensemble-averaged AGMT as the final forecast. The Xavier initialization technique was applied to initialize weights and biases. Tangent hyperbolic and sigmoid functions were used as the activation functions for the convolutional and fully connected layers, respectively. Adam optimization was applied as the gradient descent method, and the mean absolute error was applied as the loss function.
  
-## Processes of the climate change detection
-
-   - Training & validation & test ('''csh/dd_run.sh''')
-   
-   - 7x7 occlusion sensitivity analysis (csh/dd_os7.sh)
-
-## C-shell scripts for constructing DD model and physical interpretation (csh/)
+## C-shell scripts for constructing DD & ridge regression model and physical interpretation (csh/)
 - Training & validation & test of DD model: dd_run.sh
   
 - Training & test of ridge regression model: reg_run.sh
