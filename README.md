@@ -7,9 +7,24 @@
  
 ## Processes of the climate change detection
 
-   - Training & validation & test (csh/dd_run.sh)
+   - Training & validation & test (<span style="color:blue">csh/dd_run.sh</span>)
    
    - 7x7 occlusion sensitivity analysis (csh/dd_os7.sh)
+
+## C-shell scripts for constructing DD model and physical interpretation (csh/)
+- Training & validation & test of DD model: dd_run.sh
+  
+- Training & test of ridge regression model: reg_run.sh
+  
+- 7x7 occlusion sensitivity test for DD model: dd_os7.sh
+  
+- 7x7 occlusion sensitivity test for ridge regression model: reg_os7.sh
+
+- 5x5 occlusion sensitivity test for DD model: dd_os5.sh
+
+- Shapley Additive exPlanations (SHAP) with gradient explainer for DD model: dd_gshap.py
+
+- Integrated gradient for DD model: dd_ig.sh
 
 ## Python scripts for generating main figures (analysis/)
 - Figure 1: [Figure_1]_1_plot.py
