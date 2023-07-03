@@ -50,10 +50,8 @@
 - **ED Fig. 10**: [ED_Figure_10]_1_plot.py
 
 ## Data set (netCDF4)
-
 #### You can download data set here (34.9GB): https://168.131.122.201/OCL/Data/Deep-Detection/Dataset_DD.tar
 #### The data set consists of the following:
-   
 (1) Training set: 
 - Input: dataset/prcp/CESM2_LE_prcp_lat_tr.
 - Label: dataset/agmt/CESM2_LE_agmt_tr.nc
@@ -71,10 +69,12 @@
 - Label: dataset/agmt/HadCRUT5_1850_2022.nc
 
 ## Requirement (python packages)
-
-   -  Tensowflow (> version 2.0, https://www.tensorflow.org/install/)
-   -  netCDF4
-   -  numpy
-   
+   -  tensorflow-gpu v2.1.0
+   -  scikit-learn v0.23.1
+   -  netcdf4 v1.5.1.2
+   -  numpy v1.18.1
+   -  scipy v1.1.0
+   -  matplotlib v3.1.3
+   -  basemap v1.2.0
    
    
