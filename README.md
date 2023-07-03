@@ -7,7 +7,7 @@
  
 ## Processes of the climate change detection
 
-   - Training & validation & test <span style="color:blue">(csh/dd_run.sh)</span>
+   - Training & validation & test ('''csh/dd_run.sh''')
    
    - 7x7 occlusion sensitivity analysis (csh/dd_os7.sh)
 
