@@ -36,7 +36,7 @@
   
 - **Figure 3**: <code>[Figure_3]_1_binning.py</code>, <code>[Figure_3]_2_PDF_ratio.py</code>, and <code>[Figure_3]_3_plot.py</code>
   
-- **Figure 4**: <code>[Figure_4]_1__STD_trend.py</code>, <code>[Figure_4]_2_var_change.py</code>, <code>[Figure_4]_3_STD_Clim_ratio.py</code>
+- **Figure 4**: <code>[Figure_4]_1_STD_trend.py</code>, <code>[Figure_4]_2_var_change.py</code>, <code>[Figure_4]_3_STD_Clim_ratio.py</code>
                 <code>[Figure_4]_4_CPCU_var_change.py</code>, <code>[Figure_4]_5_bootstrap_STD_trend.py</code>, <code>[Figure_4]_6_bootstrap_STD_Clim_ratio.py</code>
                 , and <code>[Figure_4]_7_plot.py</code>
 
