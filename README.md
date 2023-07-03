@@ -6,13 +6,13 @@
   We generated five ensemble members with different random initial weights and defined the ensemble-averaged AGMT as the final forecast. The Xavier initialization technique was applied to initialize weights and biases. Tangent hyperbolic and sigmoid functions were used as the activation functions for the convolutional and fully connected layers, respectively. Adam optimization was applied as the gradient descent method, and the mean absolute error was applied as the loss function.
 
 ## Repository structure
-Deep-detection/: main directory
+>Deep-detection/: main directory
 
-> analysis/: Python scripts for conducting analysis and generagting figures
+>> analysis/: Python scripts for conducting analysis and generagting figures
  
-> csh/: C-shell scripts for constructing DD & ridge regression model, and conducting physical interpretation
+>> csh/: C-shell scripts for constructing DD & ridge regression model, and conducting physical interpretation
 
-> sample/: Python sample scripts used in C-shell scripts
+>> sample/: Python sample scripts used in C-shell scripts
 
 ## C-shell scripts for constructing DD & ridge regression model and physical interpretation (csh/)
 - **Training & validation & test of DD model**: dd_run.sh
