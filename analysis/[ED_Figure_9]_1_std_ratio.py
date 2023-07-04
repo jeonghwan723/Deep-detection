@@ -1,3 +1,7 @@
+'''
+JHK
+Python script to calculate the ratio between STDs in each period
+'''
 import numpy as np
 from netCDF4 import Dataset
 import os
