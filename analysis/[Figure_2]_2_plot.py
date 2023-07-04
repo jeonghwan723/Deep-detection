@@ -23,7 +23,7 @@ o_name = 'Figure2'
 
 #==========================================================
 # Bootstrap results
-# Obtained from '[Figure_2]_bootstrap.py'
+# Obtained from '[Figure_2]_intvar_agmt_trend.py'
 #==========================================================
 # 95th percentile of 41yr window
 up950_41 = 0.033
