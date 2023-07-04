@@ -1,5 +1,14 @@
+'''
+JHK
+Python script for calculating internal variability range of the ratio between dSTD and dClim. of the HF PRCP.
+'''
 import numpy as np
 from netCDF4 import Dataset
+
+#==========================================================
+# Set main directory
+#==========================================================
+hdir = '/home/jhkim/model/deep_detection'
 
 #===========================================================================
 # Function for converting from longitude to X-dimension
@@ -110,7 +119,7 @@ for i in range(80):
     #==========================================================
     # Load total PRCP [36500,55,144]
     #==========================================================
-    i_path = '/home/jhkim/task/ccd_anom_backup/dataset/prcp/cesm2_test/'
+    i_path = hdir+'/dataset/prcp/cesm2_test/'
     i_name = 'CESM2_LE_prcp_lat_test_'+ens+'.nc'
     f = Dataset(i_path+i_name,'r')
     prcp_tot = f['prcp'][365:36865,0,12:67]
@@ -119,7 +128,7 @@ for i in range(80):
     #==========================================================
     # Load HF PRCP of CESM2 LE [36500,55,144]
     #==========================================================
-    i_path = '/home/jhkim/task/ccd_anom_backup/dataset/prcp/cesm2_test_10hf/'
+    i_path = hdir+'/dataset/prcp/cesm2_test_f01/'
     i_name = 'CESM2_LE_prcp_lat_test_'+ens+'.nc'
     f = Dataset(i_path+i_name,'r')
     prcp_ano = f['prcp'][365:36865,0,12:67]
