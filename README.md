@@ -62,7 +62,7 @@
 #### You can download data set here (36.1GB): https://168.131.122.201/OCL/Data/Deep-Detection/Dataset_DD.tar
 #### The data set consists of the following:
 (1) Training set: 
-- Input: <code>dataset/prcp/CESM2_LE_prcp_lat_tr</code>
+- Input: <code>dataset/prcp/CESM2_LE_prcp_lat_tr.nc</code>
 - Label: <code>dataset/agmt/CESM2_LE_agmt_tr.nc</code>
        
 (2) validation set:
