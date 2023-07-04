@@ -1,6 +1,6 @@
 '''
 JHK
-Python script for calculating natural variability range of AGMT trend
+Python script for calculating internal variability range of AGMT trend
 '''
 
 import numpy as np
