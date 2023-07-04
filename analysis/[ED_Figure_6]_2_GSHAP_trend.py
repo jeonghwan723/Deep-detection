@@ -1,3 +1,7 @@
+'''
+JHK
+Python script for calculating the linear trend of SHAP values.
+'''
 import numpy as np
 from netCDF4 import Dataset
 from scipy import signal
