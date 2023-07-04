@@ -1,3 +1,7 @@
+'''
+JHK
+Python script for calculating the ratio between dSTD and dClim. of HF PRCP.
+'''
 import numpy as np
 from netCDF4 import Dataset
 import os
