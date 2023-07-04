@@ -1,6 +1,6 @@
 '''
 JHK
-Python script for conducting bootstraping for AGMT trend
+Python script for calculating natural variability range of AGMT trend
 '''
 
 import numpy as np
