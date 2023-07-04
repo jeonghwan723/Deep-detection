@@ -1,3 +1,7 @@
+'''
+JHK
+Python script for calculating the linear trend of 5x5 occlusion sensitivity.
+'''
 import numpy as np
 from netCDF4 import Dataset
 import os, pathlib
