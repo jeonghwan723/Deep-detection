@@ -1,3 +1,7 @@
+'''
+JHK
+Python script for calculating internal variability range of linear trend of HF PRCP variability.
+'''
 import numpy as np
 from netCDF4 import Dataset
 import os
@@ -68,7 +72,7 @@ for i in range(80):
 
     # Load HF PRCP [36500,55,144]
     # from 'Filtering.py'
-    i_path = '/home/jhkim/task/ccd_anom_backup/dataset/prcp/cesm2_test_10hf/'
+    i_path = '/home/jhkim/task/ccd_anom_backup/dataset/prcp/cesm2_test_f01/'
     i_name = 'CESM2_LE_prcp_lat_test_'+ens+'.nc'
     f = Dataset(i_path+i_name,'r')
     prcp = f['prcp'][365:37230,0,12:67]
