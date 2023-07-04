@@ -1,3 +1,7 @@
+'''
+JHK
+Python script for generating ED figure 5.
+'''
 from netCDF4 import Dataset
 import numpy as np
 import matplotlib.pyplot as plt
