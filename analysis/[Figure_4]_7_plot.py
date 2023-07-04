@@ -80,8 +80,8 @@ diff[diff==0] = -9.99e+08
 diff = np.ma.masked_equal(diff, -9.99e+08)
 
 #==========================================================
-# bootstrap results for STD trend
-# (from '[Figure_4]_5_bootstrap_STD_trend.py')
+# Internal variability range of STD trend
+# (from '[Figure_4]_5_intvar_STD_trend.py')
 #==========================================================
 # bootstrap results (confidence level)
 std_trend_up950 = np.array([0.00984413, 0.0300174,  0.00290159, 0.00664675]).reshape(1,4,1)
@@ -90,8 +90,8 @@ std_trend_up950 = np.array([0.00984413, 0.0300174,  0.00290159, 0.00664675]).res
 std_trend_up950 = np.repeat(np.repeat(std_trend_up950, 2, axis=0), 2, axis=2).reshape(2,2,4)
 
 #==========================================================
-# bootstrap results for ratio between ΔSTD and ΔClim.
-# (from '[Figure_4]_5_bootstrap_STD_Clim_ratio.py')
+# Internal variability range of the ratio between dSTD and dClim.
+# (from '[Figure_4]_5_intvar_STD_Clim_ratio.py')
 #==========================================================
 sc_ratio_up950 = np.array([0.21500588, 0.08309076, 0.22457268]).reshape(1,3,1)
 
