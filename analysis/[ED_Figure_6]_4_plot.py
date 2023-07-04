@@ -1,3 +1,7 @@
+'''
+JHK
+Python script for generating ED figure 6.
+'''
 import matplotlib
 matplotlib.use('Agg')
 import numpy as np
