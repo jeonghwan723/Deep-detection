@@ -92,5 +92,5 @@
    -  GPU: Nvidia Tesla V100
    -  CUDA version: 11.4
 
-## Reference (this is temporary and will be updated)
-**Ham, Y. G., Kim, J. H., Min, S. K., Kim, D., Li, T., Timmermann, A., & Stuecker, M. (2022). Anthropogenic fingerprints in daily precipitation revealed by deep learning. https://doi.org/10.21203/rs.3.rs-1860132/v1**
+## Reference
+**Ham, Y. G., Kim, J. H., Min, S. K., Kim, D., Li, T., Timmermann, A., & Stuecker, M. F. (2023). Anthropogenic fingerprints in daily precipitation revealed by deep learning. Nature, 1-7. https://doi.org/10.1038/s41586-023-06474-x**
