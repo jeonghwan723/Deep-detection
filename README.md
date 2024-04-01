@@ -59,7 +59,7 @@
 - **ED Fig. 10**: <code>[ED_Figure_10]_1_plot.py</code>
 
 ## Data set (netCDF4)
-#### You can download data set here (36.1GB): https://168.131.121.120/OCL/Data/Deep-Detection/Dataset_DD.tar
+#### You can download data set here (36.1GB): https://drive.google.com/file/d/10KhUscOB8F0Y7j-trMPWxYVXnZV4exmQ/view?usp=sharing
 #### The data set consists of the following:
 (1) Training set: 
 - Input: <code>dataset/prcp/CESM2_LE_prcp_lat_tr.nc</code>
